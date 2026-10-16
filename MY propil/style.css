@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f6fa;
+    color: #222;
+}
+
+header {
+    background-color: #4b86b4;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.profil {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+.foto {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 10px auto;
+    background-color: #dceaf5;
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+button {
+    background-color: #4b86b4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #32658e;
+}
+
+.kartu-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.kartu {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+/* Tampilan untuk laptop */
+@media (min-width: 768px) {
+    .kartu-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tema gelap */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode .profil,
+body.dark-mode .kartu {
+    background-color: #383838;
+    color: white;
+}
+
+body.dark-mode .foto {
+    background-color: #555;
+}
+
+
+/* Kartu hobi bisa diklik */
+.kartu {
+    cursor: pointer;
+}
+
+.kartu.active {
+    border: 2px solid #800000;
+}
